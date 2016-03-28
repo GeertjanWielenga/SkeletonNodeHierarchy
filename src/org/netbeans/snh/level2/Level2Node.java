@@ -1,5 +1,15 @@
 package org.netbeans.snh.level2;
 
-public class Level2Node {
+import java.beans.IntrospectionException;
+import org.netbeans.snh.level3.Level3ChildFactory;
+import org.openide.nodes.BeanNode;
+import org.openide.nodes.Children;
+
+public class Level2Node extends BeanNode {
+    
+    public Level2Node(String bean) throws IntrospectionException {
+        super(bean, Children.create(new Level3ChildFactory(), true));
+        setDisplayName(bean);
+    }
     
 }

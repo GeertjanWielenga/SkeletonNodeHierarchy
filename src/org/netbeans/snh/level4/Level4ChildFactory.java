@@ -1,4 +1,4 @@
-package org.netbeans.snh.level3;
+package org.netbeans.snh.level4;
 
 import java.beans.IntrospectionException;
 import java.util.List;
@@ -6,19 +6,19 @@ import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 
-public class Level3ChildFactory extends ChildFactory<String> {
+public class Level4ChildFactory extends ChildFactory<String> {
 
     @Override
     protected boolean createKeys(List<String> list) {
-        list.add("three");
+        list.add("four");
         return true;
     }
 
     @Override
     protected Node createNodeForKey(String key) {
-        Level3Node node = null;
+        Level4Node node = null;
         try {
-            node = new Level3Node(key);
+            node = new Level4Node(key);
         } catch (IntrospectionException ex) {
             Exceptions.printStackTrace(ex);
         }
